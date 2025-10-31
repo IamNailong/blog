@@ -1,0 +1,45 @@
+name: Update README with Latest Posts
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 2  # 需要获取前一个提交来比较变更
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '16'
+        
+    - name: Install dependencies
+      run: |
+        npm install js-yaml front-matter glob
+        
+    - name: Update README
+      run: |
+        node .github/scripts/update-readme.js
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "docs: auto-update README with latest posts [skip ci]"
+          git push
+        fi

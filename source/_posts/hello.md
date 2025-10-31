@@ -1,5 +1,5 @@
 ---
-title: Welcom
+title: Welcome
 date: 2025-10-31 20:00:00
 ---
 
