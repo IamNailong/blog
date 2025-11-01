@@ -1,93 +1,28 @@
-# 我的 Hexo 博客
+# 🎉 关于本站
 
-这是一个基于 Hexo 框架的个人技术博客，配置了 GitHub Pages 自动部署。
+本站源码以及全部内容： [https://github.com/iamnailong/blog](https://github.com/iamnailong/blog)
 
-## 🚀 快速开始
+<img src="https://img.shields.io/github/stars/iamnailong/blog" data-origin="https://img.shields.io/github/stars/iamnailong/blog" alt="">
+<img src="https://img.shields.io/github/forks/iamnailong/blog" data-origin="https://img.shields.io/github/forks/iamnailong/blog" alt="">
+<img src="https://img.shields.io/github/license/iamnailong/blog" data-origin="https://img.shields.io/github/license/iamnailong/blog" alt="">
 
-### 本地开发
 
-```bash
-# 安装依赖
-npm install
+## 📚 Blog
 
-# 启动本地服务器
-npm run server
+> 他每晚上崖时，那道人往往和他并肩齐上，指点他如何运气使力。说也奇怪，那道人并未教他一手半脚武功，然而他日间练武之时，竟尔渐渐身轻足健。
+>
+> 半年之后，本来劲力使不到的地方，现下一伸手就自然而然的用上了巧劲，原来拼了命也来不及做的招术，忽然做得又快又准。
+>
+> 难道那道长教我的竟是内功？
+>
+> 他怎知过去两年之中，那三髻道人每晚在高崖之顶授他呼吸吐纳之术，虽然未教他半点武艺，但所授的却是上乘内功。
+>
+> 原来郭靖心思单纯，极少杂念，修习内功易于精进，远胜满脑子各种念头此来彼去、难以驱除的聪明人，因此不到两年，居然已有小成。
 
-# 清理缓存
-npm run clean
+**博客，其实更多是写给自己看的**。与其说成写博客，倒不如说是“**学习+思考+总结+提升**”这一整个过程，也是一种能极大提高兴趣和效率的学习方式。而对于读者的作用却是有限的，主要是给读者启发和引导，以及查漏补缺。
 
-# 生成静态文件
-npm run build
-```
+然后再补充个人一点心得：就软件开发而言，知识、经验、技能不经过二次加工、打磨、升华，形成自己的系统的知识体系，时间一长，难免会变得模糊。此外，闲下来或者无法静心学习工作的时候，刷刷同行的朋友最近在搞哪块，也是件蛮有意思的事。可能在读此篇文章的大多数朋友与我一样，都是同行中最普通不过的平凡人。但是我想说，**技术博客最重要的是你有没有用心去写**，这一点欺骗不了读者的眼睛。
 
-### 创建新文章
+“**一个优秀的程序员应当尽量少做重复性的劳动**”, 写技术博客也能让程序员减少大量的重复性劳动，把自己摸索过的，`Coding`过的、思考过的、领悟到的记录下来，在工作中用到相关的内容时就能够快速翻阅。
 
-```bash
-# 创建新文章
-hexo new post "文章标题"
-
-# 创建草稿
-hexo new draft "草稿标题"
-
-# 发布草稿
-hexo publish "草稿标题"
-```
-
-## 📁 博客结构
-
-```
-├── source/
-│   ├── _posts/           # 文章目录
-│   │   ├── code-sharing/ # 代码分享
-│   │   ├── tech-learning/# 技术学习
-│   │   └── life/         # 生活感悟
-│   ├── about/            # 关于页面
-│   ├── categories/       # 分类页面
-│   └── tags/             # 标签页面
-├── themes/               # 主题目录
-├── _config.yml          # 站点配置
-└── package.json         # 依赖配置
-```
-
-## 🏷️ 分类说明
-
-- **代码分享**：实用代码片段、工具函数、开源项目
-- **技术学习**：新技术学习笔记、框架使用心得
-- **生活**：程序员日常思考、成长感悟
-
-## 🔄 自动部署
-
-项目配置了 GitHub Actions，推送到 main 分支会自动：
-1. 构建 Hexo 静态文件
-2. 部署到 GitHub Pages
-
-## 📝 写作规范
-
-### Front Matter 模板
-
-```yaml
----
-title: 文章标题
-date: YYYY-MM-DD HH:mm:ss
-categories: 
-  - 分类名称
-tags:
-  - 标签1
-  - 标签2
----
-```
-
-### 分类规范
-- 代码分享
-- 技术学习  
-- 生活
-
-## 🛠️ 自定义配置
-
-1. 修改 `_config.yml` 中的个人信息
-2. 替换 GitHub Actions 中的仓库信息
-3. 更新 `source/about/index.md` 个人介绍
-
-## 📄 许可证
-
-MIT License
+互联网是有记忆的，我想留下一些成长的脚印。
