@@ -1,5 +1,11 @@
-## Life
+- Life
 
-## Tech
+- Tech
 
-## Investment
+- Investment
+
+- Leetcode
+  - Math
+    - [sqrt(x)](src/Leetcode/Math/sqrt.md)
+
+
