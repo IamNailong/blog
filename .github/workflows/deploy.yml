@@ -1,50 +1,50 @@
-name: Deploy Hexo to GitHub Pages
+name: Deploy Docsify to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main  # 当推送到 main 分支时触发
+  workflow_dispatch:  # 允许手动触发
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        submodules: false
-        
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '16'
-        
-    - name: Install dependencies
-      run: |
-        rm -f package-lock.json
-        npm install
-      
-    - name: Clean and generate
-      run: |
-        npm run clean
-        npm run build
-        
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-      
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./public
-        
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
-      if: github.ref == 'refs/heads/main'
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare deployment files
+        run: |
+          mkdir -p _site
+          # 复制需要的文件到 _site 目录
+          cp index.html _site/
+          cp .nojekyll _site/
+          cp README.md _site/
+          cp _coverpage.md _site/
+          cp _sidebar.md _site/
+          # 复制 src 目录（如果有内容）
+          if [ -d "src" ] && [ "$(ls -A src)" ]; then
+            cp -r src _site/
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
