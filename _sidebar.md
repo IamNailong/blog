@@ -6,7 +6,8 @@
 
 - Leetcode
   - Math
-    - [sqrt(x)](src/Leetcode/Math/sqrt.md)
-    - [two_stack_queue.md](src/Leetcode/stack_heap_queue/two_stack_queue.md)
+    - [sqrt(x)](src/Leetcode/69.sqrt.md)
+    - [two_stack_queue](src/Leetcode/two_stack_queue.md)
+    - [67.add_binary](src/Leetcode/67.add_binary.md)
 
 
