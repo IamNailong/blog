@@ -1,4 +1,6 @@
-- Life
+- Learning
+  - cuda
+    - [reduction](src/Learning/cuda/reduction.md)
 
 - Tech
 
