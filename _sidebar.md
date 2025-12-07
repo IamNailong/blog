@@ -1,7 +1,8 @@
 - Learning
   - cuda
     - [reduction](src/Learning/cuda/reduction.md)
-
+  - cpp
+    - [implement vector](src/Learning/cpp/vector.md)
 - Tech
 
 - Investment
